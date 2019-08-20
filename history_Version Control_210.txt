@@ -1,0 +1,180 @@
+Ridwan@DESKTOP-TAO52TE MINGW64 ~
+$ cd Desktop
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop
+$ cd story
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story
+$ touch chapter1.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story
+$ open chapter1.txt
+bash: open: command not found
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story
+$ git init
+Initialized empty Git repository in C:/Users/Ridwan/Desktop/story/.git/
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ ls -a
+./  ../  .git/  chapter1.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git add
+Nothing specified, nothing added.   
+Maybe you wanted to say 'git add .'?
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git add 
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git add .
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   chapter1.txt
+
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git commit -m "Completed chapter 1"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Ridwan@DESKTOP-TAO52TE.(none)')
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git config --global user.email "va.rhenka@gmail.com"
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git config --global user.name "ridwanfirdaus96"
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git commit -m "Completed chapter 1"
+[master (root-commit) 8929415] Completed chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git log
+commit 892941554dac8265fc99a78d44fc56acc6e8253f (HEAD -> master)
+Author: ridwanfirdaus96 <va.rhenka@gmail.com>
+Date:   Mon Aug 19 11:17:18 2019 +0700
+
+    Completed chapter 1
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ touch chapter2.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ touch chapter3.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git add .
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git commit -m "Complete chapter 2 and 3"
+[master 1b5c78d] Complete chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git log
+commit 1b5c78dcab825d3ba1cf306bc04b77f7a1888077 (HEAD -> master)
+Author: ridwanfirdaus96 <va.rhenka@gmail.com>
+Date:   Mon Aug 19 11:23:18 2019 +0700
+
+    Complete chapter 2 and 3
+
+commit 892941554dac8265fc99a78d44fc56acc6e8253f
+Author: ridwanfirdaus96 <va.rhenka@gmail.com>
+Date:   Mon Aug 19 11:17:18 2019 +0700
+
+    Completed chapter 1
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git diff chapter 3.txt
+fatal: ambiguous argument 'chapter': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 236233c..eb0fdb2 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-I was eat on table manner
+\ No newline at end of file
++mambo brother
+\ No newline at end of file
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git diff chapter3.txt
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$
+
+Ridwan@DESKTOP-TAO52TE MINGW64 ~/Desktop/story (master)
+$
